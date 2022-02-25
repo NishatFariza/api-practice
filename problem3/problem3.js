@@ -20,14 +20,33 @@ const displayComment = comments =>{
 //    }
      comments.forEach(comment => {
         const div =document.createElement('div');
+        // div.innerHTML ="";
         div.classList.add('comment');
         div.innerHTML=`
         <h3>Name: ${comment.name}</h3>
         <p>Comment: ${comment.body}</p>
+        <button onclick='loadDetails(${comment.id})'>Click Me</button>
         `
        commentContainer.appendChild(div)
      });
      
 }
+const loadDetails = id =>{
+    // console.log(id)
+    fetch(`https://jsonplaceholder.typicode.com/comments/${id}`)
+    .then(res => res.json())
+    .then(data =>commentDetalis(data))
 
+}
+const commentDetalis = comment =>{
+    const commentDetails =document.getElementById('comment-details');
+    const div =document.createElement('div');
+       commentDetails.innerHTML ="";
+        div.classList.add('comment');
+        div.innerHTML=`
+        <h3>Name: ${comment.name}</h3>
+        <p>Comment: ${comment.email}</p>
+        `
 
+        commentDetails.appendChild(div)
+}
