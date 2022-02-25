@@ -1,0 +1,8 @@
+.comment {
+  border: 2px solid burlywood;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(15, 101, 15);
+  color: white;
+  border-radius: 20px;
+}
