@@ -1,0 +1,7 @@
+.users {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgba(168, 163, 163, 0.53);
+  background-color: rgb(14, 194, 194);
+  border-radius: 20px;
+}
